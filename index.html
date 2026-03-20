@@ -11,6 +11,10 @@
         <div class="container">
             <h1>🗳️ Elecciones Generales 2026</h1>
             <p class="subtitle">Guía Interactiva para Miembros de Mesa (MM) y Coordinador de Mesa (CM) STAE</p>
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                <span class="icon" id="themeIcon">🌙</span>
+                <span id="themeText">Modo Oscuro</span>
+            </button>
         </div>
     </header>
 
@@ -46,8 +50,10 @@
             </div>
 
             <div class="steps-container">
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="1">
+                        <input type="checkbox" class="step-checkbox" id="inst-step-1">
+                        <label for="inst-step-1" class="checkbox-label"></label>
                         <span class="step-number">1</span>
                         <h3>Recepción y verificación</h3>
                         <span class="toggle-icon">▼</span>
@@ -58,8 +64,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="2">
+                        <input type="checkbox" class="step-checkbox" id="inst-step-2">
+                        <label for="inst-step-2" class="checkbox-label"></label>
                         <span class="step-number">2</span>
                         <h3>Acondicionamiento del aula</h3>
                         <span class="toggle-icon">▼</span>
@@ -70,8 +78,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="3">
+                        <input type="checkbox" class="step-checkbox" id="inst-step-3">
+                        <label for="inst-step-3" class="checkbox-label"></label>
                         <span class="step-number">3</span>
                         <h3>Firma de cédulas</h3>
                         <span class="toggle-icon">▼</span>
@@ -82,8 +92,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="4">
+                        <input type="checkbox" class="step-checkbox" id="inst-step-4">
+                        <label for="inst-step-4" class="checkbox-label"></label>
                         <span class="step-number">4</span>
                         <h3>Generación de clave personal</h3>
                         <span class="toggle-icon">▼</span>
@@ -94,8 +106,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="cm">
                     <div class="step-header" data-step="5">
+                        <input type="checkbox" class="step-checkbox" id="inst-step-5">
+                        <label for="inst-step-5" class="checkbox-label"></label>
                         <span class="step-number">5</span>
                         <h3>Habilitación del equipo STAE</h3>
                         <span class="toggle-icon">▼</span>
@@ -106,8 +120,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="cm">
                     <div class="step-header" data-step="6">
+                        <input type="checkbox" class="step-checkbox" id="inst-step-6">
+                        <label for="inst-step-6" class="checkbox-label"></label>
                         <span class="step-number">6</span>
                         <h3>Registro de asistencia digital</h3>
                         <span class="toggle-icon">▼</span>
@@ -118,8 +134,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="cm mm">
                     <div class="step-header" data-step="7">
+                        <input type="checkbox" class="step-checkbox" id="inst-step-7">
+                        <label for="inst-step-7" class="checkbox-label"></label>
                         <span class="step-number">7</span>
                         <h3>Certificados digitales</h3>
                         <span class="toggle-icon">▼</span>
@@ -131,8 +149,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="8">
+                        <input type="checkbox" class="step-checkbox" id="inst-step-8">
+                        <label for="inst-step-8" class="checkbox-label"></label>
                         <span class="step-number">8</span>
                         <h3>Ingreso de datos del acta</h3>
                         <span class="toggle-icon">▼</span>
@@ -143,8 +163,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="9">
+                        <input type="checkbox" class="step-checkbox" id="inst-step-9">
+                        <label for="inst-step-9" class="checkbox-label"></label>
                         <span class="step-number">9</span>
                         <h3>Firma e Impresión</h3>
                         <span class="toggle-icon">▼</span>
@@ -155,8 +177,10 @@
                     </div>
                 </div>
 
-                <div class="step-card critical">
+                <div class="step-card critical" data-roles="cm mm" data-critical="true">
                     <div class="step-header" data-step="10">
+                        <input type="checkbox" class="step-checkbox" id="inst-step-10">
+                        <label for="inst-step-10" class="checkbox-label"></label>
                         <span class="step-number">10</span>
                         <h3>Cierre de fase</h3>
                         <span class="toggle-icon">▼</span>
@@ -171,7 +195,14 @@
 
             <div class="references">
                 <h4>📚 Referencias:</h4>
-                <p>Manual MM págs. 9-15; Guía de metodologías págs. 5-13; Módulo CM pág. 16, 315, 319.</p>
+                <p>
+                    <a href="https://drive.google.com/file/d/11PeR5JW8c1QXUFOuC_79T1mRsex3zJp6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📖 Manual MM</a> págs. 9-15; 
+                    <a href="https://drive.google.com/file/d/1tIT7wcZ3HGh4t7BETT13aBO8PFxZ37d1/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📘 Guía de metodologías</a> págs. 5-13; 
+                    <a href="https://drive.google.com/file/d/1dy0pDIBbV2ab_3wM9orTdudbELwDSbpb/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📙 Módulo CM</a> pág. 16-18.
+                </p>
+                <p>
+                    <a href="https://drive.google.com/file/d/1UHr_KdwfMXmaIT3CMbNttlb8ntlxMadC/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📋 Introducción (págs. 1-8) y Casos Especiales (págs. 46-48)</a>
+                </p>
             </div>
         </section>
 
@@ -186,8 +217,10 @@
             </div>
 
             <div class="steps-container">
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="1">
+                        <input type="checkbox" class="step-checkbox" id="suf-step-1">
+                        <label for="suf-step-1" class="checkbox-label"></label>
                         <span class="step-number">1</span>
                         <h3>Atención al elector</h3>
                         <span class="toggle-icon">▼</span>
@@ -198,8 +231,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="2">
+                        <input type="checkbox" class="step-checkbox" id="suf-step-2">
+                        <label for="suf-step-2" class="checkbox-label"></label>
                         <span class="step-number">2</span>
                         <h3>Acto de votación</h3>
                         <span class="toggle-icon">▼</span>
@@ -210,8 +245,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="3">
+                        <input type="checkbox" class="step-checkbox" id="suf-step-3">
+                        <label for="suf-step-3" class="checkbox-label"></label>
                         <span class="step-number">3</span>
                         <h3>Registro de firma y huella</h3>
                         <span class="toggle-icon">▼</span>
@@ -222,8 +259,10 @@
                     </div>
                 </div>
 
-                <div class="step-card critical">
+                <div class="step-card critical" data-roles="mm" data-critical="true">
                     <div class="step-header" data-step="4">
+                        <input type="checkbox" class="step-checkbox" id="suf-step-4">
+                        <label for="suf-step-4" class="checkbox-label"></label>
                         <span class="step-number">4</span>
                         <h3>Cierre de puertas</h3>
                         <span class="toggle-icon">▼</span>
@@ -234,8 +273,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="5">
+                        <input type="checkbox" class="step-checkbox" id="suf-step-5">
+                        <label for="suf-step-5" class="checkbox-label"></label>
                         <span class="step-number">5</span>
                         <h3>Procesamiento de la Lista de Electores</h3>
                         <span class="toggle-icon">▼</span>
@@ -246,8 +287,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="6">
+                        <input type="checkbox" class="step-checkbox" id="suf-step-6">
+                        <label for="suf-step-6" class="checkbox-label"></label>
                         <span class="step-number">6</span>
                         <h3>Firma del padrón</h3>
                         <span class="toggle-icon">▼</span>
@@ -258,8 +301,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="cm">
                     <div class="step-header" data-step="7">
+                        <input type="checkbox" class="step-checkbox" id="suf-step-7">
+                        <label for="suf-step-7" class="checkbox-label"></label>
                         <span class="step-number">7</span>
                         <h3>Reinstalación de la STAE</h3>
                         <span class="toggle-icon">▼</span>
@@ -270,8 +315,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="8">
+                        <input type="checkbox" class="step-checkbox" id="suf-step-8">
+                        <label for="suf-step-8" class="checkbox-label"></label>
                         <span class="step-number">8</span>
                         <h3>Registro de datos finales</h3>
                         <span class="toggle-icon">▼</span>
@@ -282,8 +329,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="9">
+                        <input type="checkbox" class="step-checkbox" id="suf-step-9">
+                        <label for="suf-step-9" class="checkbox-label"></label>
                         <span class="step-number">9</span>
                         <h3>Firma digital e impresión</h3>
                         <span class="toggle-icon">▼</span>
@@ -294,8 +343,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="cm">
                     <div class="step-header" data-step="10">
+                        <input type="checkbox" class="step-checkbox" id="suf-step-10">
+                        <label for="suf-step-10" class="checkbox-label"></label>
                         <span class="step-number">10</span>
                         <h3>Organización de documentos</h3>
                         <span class="toggle-icon">▼</span>
@@ -309,7 +360,14 @@
 
             <div class="references">
                 <h4>📚 Referencias:</h4>
-                <p>Manual MM págs. 16-23; Guía de metodologías págs. 17-25; Módulo CM pág. 26-40.</p>
+                <p>
+                    <a href="https://drive.google.com/file/d/1mBuSq676DdjmGHKNeryJQgy3i5on1ww6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📖 Manual MM</a> págs. 16-23; 
+                    <a href="https://drive.google.com/file/d/1tIT7wcZ3HGh4t7BETT13aBO8PFxZ37d1/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📘 Guía de metodologías</a> págs. 16-31; 
+                    <a href="https://drive.google.com/file/d/1dy0pDIBbV2ab_3wM9orTdudbELwDSbpb/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📙 Módulo CM</a> pág. 26-36.
+                </p>
+                <p>
+                    <a href="https://drive.google.com/file/d/1UHr_KdwfMXmaIT3CMbNttlb8ntlxMadC/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📋 Introducción (págs. 1-8) y Casos Especiales (págs. 46-48)</a>
+                </p>
             </div>
         </section>
 
@@ -324,8 +382,10 @@
             </div>
 
             <div class="steps-container">
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="1">
+                        <input type="checkbox" class="step-checkbox" id="esc-step-1">
+                        <label for="esc-step-1" class="checkbox-label"></label>
                         <span class="step-number">1</span>
                         <h3>Preparación de la mesa</h3>
                         <span class="toggle-icon">▼</span>
@@ -336,8 +396,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="2">
+                        <input type="checkbox" class="step-checkbox" id="esc-step-2">
+                        <label for="esc-step-2" class="checkbox-label"></label>
                         <span class="step-number">2</span>
                         <h3>Conteo físico inicial</h3>
                         <span class="toggle-icon">▼</span>
@@ -348,8 +410,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="3">
+                        <input type="checkbox" class="step-checkbox" id="esc-step-3">
+                        <label for="esc-step-3" class="checkbox-label"></label>
                         <span class="step-number">3</span>
                         <h3>Orden de escrutinio</h3>
                         <span class="toggle-icon">▼</span>
@@ -360,8 +424,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="4">
+                        <input type="checkbox" class="step-checkbox" id="esc-step-4">
+                        <label for="esc-step-4" class="checkbox-label"></label>
                         <span class="step-number">4</span>
                         <h3>Registro en Hoja Borrador (HB)</h3>
                         <span class="toggle-icon">▼</span>
@@ -372,8 +438,10 @@
                     </div>
                 </div>
 
-                <div class="step-card critical">
+                <div class="step-card critical" data-roles="cm" data-critical="true">
                     <div class="step-header" data-step="5">
+                        <input type="checkbox" class="step-checkbox" id="esc-step-5">
+                        <label for="esc-step-5" class="checkbox-label"></label>
                         <span class="step-number">5</span>
                         <h3>Control de Calidad (Paso Crítico)</h3>
                         <span class="toggle-icon">▼</span>
@@ -384,8 +452,10 @@
                     </div>
                 </div>
 
-                <div class="step-card critical">
+                <div class="step-card critical" data-roles="cm" data-critical="true">
                     <div class="step-header" data-step="6">
+                        <input type="checkbox" class="step-checkbox" id="esc-step-6">
+                        <label for="esc-step-6" class="checkbox-label"></label>
                         <span class="step-number">6</span>
                         <h3>Puesta a Cero</h3>
                         <span class="toggle-icon">▼</span>
@@ -396,8 +466,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="7">
+                        <input type="checkbox" class="step-checkbox" id="esc-step-7">
+                        <label for="esc-step-7" class="checkbox-label"></label>
                         <span class="step-number">7</span>
                         <h3>Digitación de resultados</h3>
                         <span class="toggle-icon">▼</span>
@@ -408,8 +480,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="8">
+                        <input type="checkbox" class="step-checkbox" id="esc-step-8">
+                        <label for="esc-step-8" class="checkbox-label"></label>
                         <span class="step-number">8</span>
                         <h3>Firma digital de actas</h3>
                         <span class="toggle-icon">▼</span>
@@ -420,8 +494,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="mm">
                     <div class="step-header" data-step="9">
+                        <input type="checkbox" class="step-checkbox" id="esc-step-9">
+                        <label for="esc-step-9" class="checkbox-label"></label>
                         <span class="step-number">9</span>
                         <h3>Impresión y distribución</h3>
                         <span class="toggle-icon">▼</span>
@@ -432,8 +508,10 @@
                     </div>
                 </div>
 
-                <div class="step-card critical">
+                <div class="step-card critical" data-roles="cm" data-critical="true">
                     <div class="step-header" data-step="10">
+                        <input type="checkbox" class="step-checkbox" id="esc-step-10">
+                        <label for="esc-step-10" class="checkbox-label"></label>
                         <span class="step-number">10</span>
                         <h3>Transmisión de resultados</h3>
                         <span class="toggle-icon">▼</span>
@@ -444,8 +522,10 @@
                     </div>
                 </div>
 
-                <div class="step-card">
+                <div class="step-card" data-roles="cm mm">
                     <div class="step-header" data-step="11">
+                        <input type="checkbox" class="step-checkbox" id="esc-step-11">
+                        <label for="esc-step-11" class="checkbox-label"></label>
                         <span class="step-number">11</span>
                         <h3>Repliegue de material</h3>
                         <span class="toggle-icon">▼</span>
@@ -460,15 +540,62 @@
 
             <div class="references">
                 <h4>📚 Referencias:</h4>
-                <p>Manual MM págs. 24-45; Guía de metodologías págs. 31-43; Módulo CM pág. 43-72; Videos de asistencia electoral.</p>
+                <p>
+                    <a href="https://drive.google.com/file/d/1G_048KZ1Q7n9Dl4XfdePFfbFHqrXV2jZ/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📖 Manual MM (págs. 24-35)</a> | 
+                    <a href="https://drive.google.com/file/d/1fk538mjrD0Wdi36A_S4XpnXia6rqECbY/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📖 Manual MM (págs. 36-45)</a>; 
+                    <a href="https://drive.google.com/file/d/1tIT7wcZ3HGh4t7BETT13aBO8PFxZ37d1/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📘 Guía de metodologías</a> págs. 31-43; 
+                    <a href="https://drive.google.com/file/d/1dy0pDIBbV2ab_3wM9orTdudbELwDSbpb/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📙 Módulo CM</a> pág. 43-72.
+                </p>
+                <p>
+                    <a href="https://drive.google.com/file/d/1UHr_KdwfMXmaIT3CMbNttlb8ntlxMadC/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="reference-link">📋 Introducción (págs. 1-8) y Casos Especiales (págs. 46-48)</a>
+                </p>
+                <p>
+                    <a href="https://youtu.be/ZP8ELEndZyk" target="_blank" rel="noopener noreferrer" class="reference-link">🎥 Video Tutorial (Parte 1)</a> | 
+                    <a href="https://youtu.be/CVNBlHwU4qg" target="_blank" rel="noopener noreferrer" class="reference-link">🎥 Video Tutorial (Parte 2)</a>
+                </p>
             </div>
         </section>
     </main>
+
+    <!-- Filtros por Rol -->
+    <div class="role-filter-container">
+        <button class="filter-toggle" id="filterToggle">
+            <span class="icon">👤</span>
+            <span>Filtrar por Rol</span>
+        </button>
+        <div class="role-filter-panel" id="roleFilterPanel">
+            <h3>Mostrar tareas de:</h3>
+            <label class="filter-option">
+                <input type="checkbox" id="filterMM" checked>
+                <span class="filter-label mm">Miembros de Mesa (MM)</span>
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" id="filterCM" checked>
+                <span class="filter-label cm">Coordinador de Mesa (CM)</span>
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" id="filterCritical" checked>
+                <span class="filter-label critical">Pasos Críticos</span>
+            </label>
+            <button class="apply-filter" id="applyFilter">Aplicar Filtros</button>
+        </div>
+    </div>
+
+    <!-- Indicador de Progreso -->
+    <div class="progress-indicator" id="progressIndicator">
+        <div class="progress-text">
+            <span id="progressCurrent">0</span> / <span id="progressTotal">0</span> completados
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
             <p>📋 Información oficial consolidada de los manuales y guías de la ONPE</p>
             <p>Elecciones Generales 2026 - Perú</p>
+            <p class="credit">💼 Desarrollado por Eduardo Ch. Coordinador Técnico de Mesa STAE</p>
         </div>
     </footer>
 
