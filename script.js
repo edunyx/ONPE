@@ -321,6 +321,29 @@ document.body.appendChild(resetBtn);
 */
 
 // ============================================
+// BOTÓN SUBIR AL INICIO
+// ============================================
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+// Mostrar/ocultar botón según scroll
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('visible');
+    } else {
+        scrollToTopBtn.classList.remove('visible');
+    }
+});
+
+// Funcionalidad del botón
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+    vibrateDevice(10);
+});
+
+// ============================================
 // INICIALIZACIÓN AL CARGAR LA PÁGINA
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
